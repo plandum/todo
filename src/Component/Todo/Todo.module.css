@@ -1,0 +1,73 @@
+.TopMenu {
+  position: fixed;
+  right: 25px;
+  height: 10%;
+  width: 97%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  width: 1800px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  margin-left: 10px;
+  font-size: 30px;
+  font-weight: 800;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    162deg,
+    rgba(158, 0, 255, 1) 0%,
+    rgba(255, 239, 0, 1) 100%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.logoPicture {
+  width: 60px;
+}
+
+.profile {
+  color: aqua;
+  font-size: 24px;
+}
+
+.MainDiv {
+  position: fixed;
+  right: 25px;
+  bottom: 15px;
+  height: 90%;
+  width: 97%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  padding: 15px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Btn {
+  margin-top: 10px;
+  height: 45px;
+  width: 175px;
+  border-radius: 30px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.Btn:hover {
+  background-color: #04d78a;
+  border: 2px solid #04d78a;
+}
