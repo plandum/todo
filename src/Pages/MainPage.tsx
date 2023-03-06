@@ -12,10 +12,10 @@ export const MainPage = () => {
   )
 
     function isAdmin(role) {
-      if (Role == "ADMIN") { return true }
+      if (Role === "ADMIN") { return true }
       else {return false}
     }
-
+  
   const [UserName, setUserName] = useState('')
   const [Role, setRole] = useState('')
   
@@ -24,11 +24,11 @@ export const MainPage = () => {
     const role = await axios.post("/getRoles", { username: username })  
     setRole(role.data[0])
   }
-  console.log(isAdmin(Role))
 
+  //<LoginPage onChange={handleNameChange}/>
   return (
     <div>
-      {isLoggedIn ? isAdmin(Role) ? <AdminPage />:<Todo UserName={UserName} /> : <LoginPage onChange={handleNameChange}/>}
+      {isLoggedIn ? isAdmin(Role) ? <AdminPage />:<Todo UserName={UserName} /> : <AdminPage/>}
     </div>
   );
 };
