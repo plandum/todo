@@ -21,7 +21,7 @@ export const MainPage = () => {
   
   const handleNameChange = async (username) => {
     setUserName(username)
-    const role = await axios.post("/getRoles", { username: username })  
+    const role = await axios.post("https://backend-nu-beryl.vercel.app//getRoles", { username: username })  
     setRole(role.data[0])
   }
 
