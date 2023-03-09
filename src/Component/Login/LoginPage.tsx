@@ -28,7 +28,7 @@ export const LoginPage = ({ onChange }) => {
       <div className={styles.CentringDiv}>
         <div className={styles.FormGroup}>
           <label className={styles.FormLabel} >
-            UserName
+            Username
           </label>
           <input
             placeholder="username"
@@ -36,8 +36,7 @@ export const LoginPage = ({ onChange }) => {
             id="login"
             className={styles.FormControl}
             value={username}
-            onChange={handleNameChange}
-            
+            onChange={handleNameChange} 
           />
         </div>
         <div className={styles.FormGroup}>

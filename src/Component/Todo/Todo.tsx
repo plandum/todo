@@ -6,23 +6,21 @@ import axios from 'axios';
 export const Todo = ({ UserName }) => {
   const [TodoData, setTodoData] = useState([])
   var username = UserName
-  const UpdateTodo = async (e) => {
-    e.preventDefault();
+  const UpdateTodo = async () => {
     const reg = await axios.post("/getTodo", { username: username })
     setTodoData(reg.data)
   }
-
+  setTimeout(UpdateTodo, 1000);
   return (
     <div className={styles.container}>
       <header>
         <div className={styles.TopMenu}>
           <span>{username}</span>
-          <button className={styles.Btn} onClick={UpdateTodo}>Получить задачи</button>
         </div>
       </header>
       <main>
         <div className={styles.MainDiv}>
-          {TodoData.map((massive) => {return (<UserTodo title={massive[1]} description= {massive[2]} />) })}
+          {TodoData.map((massive) => {return (<UserTodo deadline={massive[0]} title={massive[1]} description= {massive[2]} />) })}
         </div>
       </main>
     </div>

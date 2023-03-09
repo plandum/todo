@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './UserTodo.module.css';
 
-const UserTodo = ({title, description, }) => {
+const UserTodo = ({title, description,deadline }) => {
 
   return (
     <div className={styles.Block}>
-      <span className={styles.TodoLogin}>{ title }</span>
+      <span className={styles.TodoDeadline}>{ deadline}</span>
+      <span className={styles.TodoTitle}>{ title }</span>
       <div className={styles.TodoList}>
-        <label>{ description }</label>
+        <span className={styles.TodoDescription}>{description}</span>
       </div>
     </div>
   );

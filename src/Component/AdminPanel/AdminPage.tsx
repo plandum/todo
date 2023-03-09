@@ -14,7 +14,7 @@ export const AdminPage = () => {
     const reg = await axios.get("/users")
     setUsername(reg.data)    
   }
-  setTimeout(GetUsers, 5000);
+  setTimeout(GetUsers, 1000);
 
 
     return (

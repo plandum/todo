@@ -25,10 +25,10 @@ export const MainPage = () => {
     setRole(role.data[0])
   }
 
-  //<LoginPage onChange={handleNameChange}/>
+  
   return (
     <div>
-      {isLoggedIn ? isAdmin(Role) ? <AdminPage />:<Todo UserName={UserName} /> : <AdminPage/>}
+      {isLoggedIn ? isAdmin(Role) ? <AdminPage />:<Todo UserName={UserName} /> : <LoginPage onChange={handleNameChange}/>}
     </div>
   );
 };
