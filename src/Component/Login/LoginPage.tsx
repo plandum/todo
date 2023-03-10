@@ -26,6 +26,7 @@ export const LoginPage = ({ onChange }) => {
   return (
     <form onSubmit={HandleSubmit}>
       <div className={styles.CentringDiv}>
+        <label className={styles.title}>Система управления заданиями</label>
         <div className={styles.FormGroup}>
           <label className={styles.FormLabel} >
             Username
