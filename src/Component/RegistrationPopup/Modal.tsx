@@ -10,6 +10,7 @@ const Modal = ({ active, setActive }) => {
   const HandleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const reg = await axios.post("/registration", { username: UserName, password: password })
+    alert(reg.data.message)
   }
   return (
     <form onSubmit={HandleSubmit}>
